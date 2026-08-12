@@ -1,0 +1,11 @@
+# Last updated: 8/12/2026, 11:29:29 AM
+class Solution(object):
+    def isUgly(self, n):
+        if n <= 0:
+            return False
+
+        for factor in (2, 3, 5):
+            while n % factor == 0:
+                n //= factor
+
+        return n == 1
